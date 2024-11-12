@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Notas</title>
-
-    <!-- Metadatos Open Graph para vista previa en redes sociales -->
     <meta property="og:title" content="Celebración de Rosa Lucía Ramos" />
     <meta property="og:description" content="¡Únete a celebrar este gran día! Una fiesta llena de alegría, amor y recuerdos." />
     <meta property="og:image" content="https://drive.google.com/uc?id=1cno4V4WDJfE1lJkF34Q3C9KtVz_St2VT" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-
-
     <link rel="stylesheet" href="css/escrito-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
     <section id="nota-section">
         <div class="form-container">
         <div class="form-header">
@@ -27,7 +20,7 @@
             <div class="close-icon" onclick="closeForm()">×</div>
         </div>
         <h2>Tu Nota</h2>
-        <form id="noteForm">
+        <form id="noteForm" action="https://formspree.io/f/mgveyzkp" method="POST">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
             
@@ -39,9 +32,6 @@
         </form>
         </div>
     </section>
-
     <script src="js/escrito-script.js"></script>
 </body>
-
 </html>
-
