@@ -1,6 +1,8 @@
-// Manejador del formulario
-document.getElementById("noteForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita el envío real para manejar la redirección
-    alert("¡Tu nota ha sido enviada con éxito!");
-    window.location.href = "gracias.html"; // Redirige a gracias.html
+// Contador de caracteres en el campo de texto
+const textarea = document.getElementById("nota");
+const charCount = document.getElementById("charCount");
+
+textarea.addEventListener("input", () => {
+    const currentLength = textarea.value.length;
+    charCount.textContent = `${currentLength}/150 caracteres`;
 });
