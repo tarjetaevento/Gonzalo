@@ -15,21 +15,23 @@
 <body>
     <section id="nota-section">
         <div class="form-container">
-        <div class="form-header">
-            <img src="assets/escrito.png" alt="Icono Nota" class="icono-formulario">
-            <div class="close-icon" onclick="closeForm()">×</div>
-        </div>
-        <h2>Tu Nota</h2>
-        <form id="noteForm" action="https://formspree.io/f/mgveyzkp" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
-            
-            <label for="nota">Nota:</label>
-            <textarea id="nota" name="nota" maxlength="150" placeholder="Escribe tu nota aquí..."></textarea>
-            <p id="charCount">0/150 caracteres</p>
-            
-            <button type="submit">Enviar</button>
-        </form>
+            <div class="form-header">
+                <img src="assets/escrito.png" alt="Icono Nota" class="icono-formulario">
+                <div class="close-icon" onclick="closeForm()">×</div>
+            </div>
+            <h2>Tu Nota</h2>
+            <form id="noteForm" action="https://formspree.io/f/mgveyzkp" method="POST" target="_self">
+                <!-- Este campo oculto redirige automáticamente al enviar -->
+                <input type="hidden" name="_redirect" value="gracias.html">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+                
+                <label for="nota">Nota:</label>
+                <textarea id="nota" name="nota" maxlength="150" placeholder="Escribe tu nota aquí..."></textarea>
+                <p id="charCount">0/150 caracteres</p>
+                
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </section>
     <script src="js/escrito-script.js"></script>
